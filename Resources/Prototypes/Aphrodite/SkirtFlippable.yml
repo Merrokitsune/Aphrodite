@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingUniformSkirtflippable
+  id: ClothingUniformYukonSkirtTurtle
+  name: Yukon Genetics worker uniform
+  description: A turtle sweater with a Navy blue skirt and blue waist straps.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Uniforms/Jumpskirt/Decorskirt.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Uniforms/Jumpskirt/Decorskirt.rsi
+
+- type: entity
+  parent: [ClothingHeadHeadHatBaseFlipped, ClothingUniformYukonSkirtTurtle]
+  id: ClothingUniformYukonSkirtTurtleFlipped
+  name: Lewd Yukon Genetics worker uniform
