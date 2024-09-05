@@ -890,12 +890,12 @@
          - Command
 
 - type: loadout
-  id: LoadoutUniformSkirtTurtle
+  id: LoadoutClothingUniformYukonSkirtTurtle
   category: Uniform
   cost: 2
   exclusive: true
   items:
-    - ClothingUniformSkirtTurtle
+    - ClothingUniformYukonSkirtTurtle
   requirements:
     - !type:CharacterDepartmentRequirement
        inverted: true
