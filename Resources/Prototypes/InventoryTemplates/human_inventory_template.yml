@@ -8,6 +8,12 @@
       uiWindowPos: 1,0
       strippingWindowPos: 1,3
       displayName: Shoes
+    - name: underwear
+      slotTexture: neck
+      slotFlags: UNDERWEAR
+      uiWindowPos: 2,0
+      strippingWindowPos: 0,3
+      displayName: Underwear
     - name: jumpsuit
       slotTexture: uniform
       slotFlags: INNERCLOTHING

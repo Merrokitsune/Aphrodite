@@ -20,6 +20,12 @@
       displayName: ID
 
     # For drip reasons.
+    - name: underwear
+      slotTexture: neck
+      slotFlags: UNDERWEAR
+      uiWindowPos: 0,3
+      strippingWindowPos: 2,2
+      displayName: Underwear
     - name: head
       slotTexture: head
       slotFlags: HEAD
