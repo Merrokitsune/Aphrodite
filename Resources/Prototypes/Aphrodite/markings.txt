@@ -1,0 +1,102 @@
+- type: marking
+  id: PleasureDollHeadMarking
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: head
+
+- type: marking
+  id: PleasureDollChestMarking
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: torso
+
+#- type: marking
+#  id: PleasureDollChestMarkingAlt
+#  bodyPart: Chest
+#  markingCategory: Chest
+#  speciesRestriction: [IPC]
+#  sprites:
+#  - sprite: Aphrodite/PleasureDollmarking.rsi
+#    state: torso
+
+- type: marking
+  id: PleasureDollLArmMarking
+  bodyPart: LArm
+  markingCategory: Arms
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: l_arm
+
+- type: marking
+  id: PleasureDollLHandMarking
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: l_hand
+
+- type: marking
+  id: PleasureDollLLegMarking
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: l_leg
+
+
+- type: marking
+  id: PleasureDollLFootMarking
+  bodyPart: LFoot
+  markingCategory: Legs
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: l_foot
+
+
+- type: marking
+  id: PleasureDollRArmMarking
+  bodyPart: RArm
+  markingCategory: Arms
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: r_arm
+
+
+- type: marking
+  id: PleasureDollRHandMarking
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: r_hand
+
+- type: marking
+  id: PleasureDollRLegMarking
+  bodyPart: RLeg
+  markingCategory: Legs
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: r_leg
+
+
+- type: marking
+  id: PleasureDollRFootMarking
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Aphrodite/PleasureDollmarking.rsi
+    state: r_foot

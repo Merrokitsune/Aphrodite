@@ -1,19 +1,19 @@
 - type: entity
   parent: BaseItem
-  id: BaseFleshlight
+  id: BaseFleshlight #game crashes if i change it
   abstract: true
   components:
   - type: PhysicalComposition
     materialComposition:
       Plastic: 100
   - type: StaticPrice
-    price: 75
+    price: 1000
   - type: Drink
     solution: fleshlight
     ignoreEmpty: true
   - type: SolutionContainerManager
     solutions:
-      fleshlight:
+      fleshlight: #idk
         maxVol: 10
   - type: SolutionTransfer
     transferAmount: 5

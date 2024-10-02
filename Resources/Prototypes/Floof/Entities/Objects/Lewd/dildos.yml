@@ -7,10 +7,11 @@
     materialComposition:
       Plastic: 100
   - type: StaticPrice
-    price: 75
+    price: 1000
+# game also fucking crashes if i opt this out
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: AvianDildo
   name: avian dildo
   description: A dildo in the shape of a bird's "caw-k".
@@ -20,7 +21,7 @@
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: CanineDildo
   name: canine dildo
   description: A dildo of a green rocket.
@@ -30,7 +31,7 @@
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: CanineDildoRed
   name: red canine dildo
   description: You'll be seeing stars when you ride THIS red rocket.
@@ -40,7 +41,7 @@
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: HorseDildo
   name: horse dildo
   description: A large dildo of a horse... Wow it's big...
@@ -50,17 +51,17 @@
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: DragonDildo
   name: dragon dildo
-  description: A large red dildo of a dragon... Woof...
+  description: A large red dildo of a dragon...
   components:
   - type: Sprite
     sprite: Floof/Objects/Fun/Lewd/Toys/Dildos/dildo_dragon.rsi
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: NormalDildo
   name: dildo
   description: A simple pink dildo.
@@ -70,7 +71,7 @@
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: TentacleDildo
   name: tentacle dildo
   description: A floppy tentacle dildo... Is it slimey?
@@ -80,7 +81,7 @@
     state: icon
 
 - type: entity
-  parent: BaseDildo
+  parent: BaseFleshlight
   id: DoubleDildo
   name: double-sided dildo
   description: A long dildo with two ends. Bring a friend!

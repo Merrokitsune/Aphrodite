@@ -8,7 +8,7 @@
       state: ipc_antenna_tv
 
 - type: marking
-  speciesRestriction: [IPC]
+  speciesRestriction: []
   id: RobotAntennaTesla
   bodyPart: HeadTop
   markingCategory: HeadTop
@@ -35,7 +35,7 @@
 #       state: ipc_antenna_light
 
 - type: marking
-  speciesRestriction: [IPC]
+  speciesRestriction: []
   id: RobotAntennaCyberhead
   bodyPart: HeadTop
   markingCategory: HeadTop
@@ -53,7 +53,7 @@
 #       state: ipc_antenna_sidelights
 
 - type: marking
-  speciesRestriction: [IPC]
+  speciesRestriction: []
   id: RobotAntennaAntlers
   bodyPart: HeadTop
   markingCategory: HeadTop
@@ -62,7 +62,7 @@
       state: ipc_antenna_antlers
 
 - type: marking
-  speciesRestriction: [IPC]
+  speciesRestriction: []
   id: RobotAntennaDroneeyes
   bodyPart: HeadTop
   markingCategory: HeadTop
@@ -71,7 +71,7 @@
       state: ipc_antenna_droneeyes
 
 - type: marking
-  speciesRestriction: [IPC]
+  speciesRestriction: []
   id: RobotAntennaCrowned
   bodyPart: HeadTop
   markingCategory: HeadTop
@@ -80,7 +80,7 @@
       state: ipc_antenna_crowned
 
 - type: marking
-  speciesRestriction: [IPC]
+  speciesRestriction: []
   id: RobotAntennaTowers
   bodyPart: HeadTop
   markingCategory: HeadTop
