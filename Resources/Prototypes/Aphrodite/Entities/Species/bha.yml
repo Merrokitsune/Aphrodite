@@ -1,0 +1,235 @@
+- type: species
+  id: IPC
+  name: species-name-ipc
+  roundStart: true
+  prototype: MobIPC
+  sprites: MobIPCSprites
+  markingLimits: MobIPCMarkingLimits
+  dollPrototype: MobIPCDummy
+  skinColoration: Hues
+  minAge: 1
+  maxAge: 240
+  oldAge: 50
+  youngAge: 50
+  maleFirstNames: IpcFirst
+  femaleFirstNames: IpcFirst
+  lastNames: IpcLast
+  naming: FirstDashLast
+  sexes:
+  - Unsexed
+
+# The lack of a layer means that
+# this person cannot have round-start anything
+# applied to that layer. It has to instead
+# be defined as a 'custom base layer'
+# in either the mob's starting marking prototype,
+# or it has to be added in C#.
+- type: speciesBaseSprites
+  id: MobBHASprites
+  sprites:
+    Head: MobBHAHead
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    Hair: MobHumanoidMarkingMatchSkin
+    Chest: MobBHATorso
+    LArm: MobBHALArm
+    RArm: MobBHARArm
+    LHand: MobBHALHand
+    RHand: MobBHARHand
+    LLeg: MobBHALLeg
+    RLeg: MobBHARLeg
+    LFoot: MobBHALFoot
+    RFoot: MobBHARFoot
+
+- type: markingPoints
+  id: MobBHAMarkingLimits
+  points:
+    Head:
+      points: 1
+      required: true
+      defaultMarkings: [ MobBHAHeadDefault ]
+    Chest:
+      points: 1
+      required: true
+      defaultMarkings: [ MobBHATorsoDefault ]
+    Legs:
+      points: 4
+      required: true
+      defaultMarkings: [ MobBHALLegDefault, MobBHALFootDefault, MobBHARLegDefault, MobBHARFootDefault ]
+    Arms:
+      points: 4
+      required: true
+      defaultMarkings: [ MobBHALArmDefault, MobBHALHandDefault, MobBHARArmDefault, MobBHARHandDefault ]
+    HeadSide:
+      points: 1
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobBHAMarkingFollowSkin
+  markingsMatchSkin: true
+  layerAlpha: 0.5
+
+# Head
+
+- type: humanoidBaseSprite
+  id: MobBHAHead
+
+- type: humanoidBaseSprite
+  id: MobBHAHeadMale
+
+- type: humanoidBaseSprite
+  id: MobBHAHeadFemale
+
+- type: marking
+  id: MobBHAHeadDefault
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: head_m
+
+# Torso
+
+- type: humanoidBaseSprite
+  id: MobBHATorso
+
+- type: humanoidBaseSprite
+  id: MobBHATorsoMale
+
+- type: humanoidBaseSprite
+  id: MobBHATorsoFemale
+
+- type: marking
+  id: MobBHATorsoDefault
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: torso_m
+
+- type: marking
+  id: MobBHATorsoFemaleDefault
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: torso_f
+
+# Left Leg
+
+- type: humanoidBaseSprite
+  id: MobBHALLeg
+
+- type: marking
+  id: MobBHALLegDefault
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: l_leg
+
+# Left Arm
+
+- type: humanoidBaseSprite
+  id: MobBHALArm
+
+- type: marking
+  id: MobBHALArmDefault
+  bodyPart: LArm
+  markingCategory: Arms
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: l_arm
+
+#LHand
+
+- type: humanoidBaseSprite
+  id: MobBHALHand
+
+- type: marking
+  id: MobBHALHandDefault
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: l_hand
+
+#LFoot
+
+- type: humanoidBaseSprite
+  id: MobBHALFoot
+
+- type: marking
+  id: MobBHALFootDefault
+  bodyPart: LFoot
+  markingCategory: Legs
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: l_foot
+
+#RLeg
+
+- type: humanoidBaseSprite
+  id: MobBHARLeg
+
+- type: marking
+  id: MobBHARLegDefault
+  bodyPart: RLeg
+  markingCategory: Legs
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: r_leg
+
+#RArm
+
+- type: humanoidBaseSprite
+  id: MobBHARArm
+
+- type: marking
+  id: MobBHARArmDefault
+  bodyPart: RArm
+  markingCategory: Arms
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: r_arm
+
+#RHand
+
+- type: humanoidBaseSprite
+  id: MobBHARHand
+
+- type: marking
+  id: MobBHARHandDefault
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: r_hand
+
+#RFoot
+
+- type: humanoidBaseSprite
+  id: MobBHARFoot
+
+- type: marking
+  id: MobBHARFootDefault
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [BHA]
+  sprites:
+  - sprite: Mobs/Species/BHA/parts.rsi
+    state: r_foot
+
+- type: Tag
+  id: BHAMaskWearable
