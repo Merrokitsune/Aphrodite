@@ -113,6 +113,10 @@
     speechSounds: Slime
   - type: TypingIndicator
     proto: slime
+  - type: SpeciesLanguage
+    understoodLanguages:
+    - Slime
+  - type: CanEnterPipeCrawling
 
 - type: entity
   name: basic slime

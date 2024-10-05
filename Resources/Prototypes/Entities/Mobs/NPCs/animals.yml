@@ -400,6 +400,21 @@
       behaviors:
       - !type:GibBehavior { }
   - type: NonSpreaderZombie
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-organic
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 0
+  - type: CanEnterPipeCrawling
+  - type: DamageOnStep
+    damage:
+      types:
+        Blunt: 10
 
 - type: entity
   name: glockroach
@@ -1746,10 +1761,12 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
-  - type: StepTriggerImmune
-    whitelist:
-      types:
-      - Landmine
+  - type: FoodSequenceElement
+    entries:
+      Taco: RatTaco
+      Burger: RatBurger
+      Skewer: RatSkewer
+  - type: CanEnterPipeCrawling
 
 - type: entity
   parent: MobMouse
@@ -2368,12 +2385,7 @@
       groups:
         Brute: -0.07
         Burn: -0.07
-  - type: RandomBark
-    barkType: hissing
-    barkMultiplier: 0.3
-  - type: BloodSucker
-    webRequired: true
-  - type: Cocooner
+  - type: CanEnterPipeCrawling
 
 - type: entity
   name: tarantula
@@ -3473,6 +3485,9 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: HTN
+    rootTask:
+      task: RuminantCompound
 
 - type: entity
   name: diona nymph
