@@ -2,13 +2,17 @@ using Content.Shared.Atmos.Piping.Crawling.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Tools.Systems;
 using Content.Shared.Verbs;
+using Robust.Shared.Containers;
 
 namespace Content.Shared.Atmos.Piping.Crawling.Systems;
 
 public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
 {
+    [Dependency] private readonly SharedContainerSystem _containers = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly WeldableSystem _weldable = default!;
+
+    const string PipeContainer = "pipe";
 
     public override void Initialize()
     {
@@ -56,7 +60,7 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
 
         var inPipe = HasComp<PipeCrawlingComponent>(args.User);
 
-        switch (pipeComp.ContainedEntities.Contains(args.User))
+        switch (_containers.ContainsEntity(args.User, uid))
         {
             case true:
             {
@@ -110,7 +114,7 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
 
         var inPipe = HasComp<PipeCrawlingComponent>(args.User);
 
-        switch (pipeComp.ContainedEntities.Contains(args.User))
+        switch (_containers.ContainsEntity(args.User, uid))
         {
             case true:
             {
@@ -145,7 +149,10 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
         if (!TryComp<PipeCrawlingPipeComponent>(pipe, out var pipeComp))
             return;
 
-        if (pipeComp.ContainedEntities.Contains(user))
+        if (!_containers.TryGetContainer(pipe, PipeContainer, out var pipeContainer))
+            return;
+
+        if (_containers.ContainsEntity(user, pipe))
             return;
 
         _xform.TryGetMapOrGridCoordinates(pipe, out var pipePos);
@@ -154,7 +161,7 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
         if (pipePos == null)
             return;
 
-        pipeComp.ContainedEntities.Add(user);
+        _containers.Insert(user, pipeContainer);
         var pipeCrawlComp = EnsureComp<PipeCrawlingComponent>(user);
         pipeCrawlComp.CurrentPipe = pipe;
         pipeCrawlComp.NextMoveAttempt = TimeSpan.Zero;
@@ -168,10 +175,13 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
         if (!TryComp<PipeCrawlingPipeComponent>(pipe, out var pipeComp))
             return;
 
-        if (!pipeComp.ContainedEntities.Contains(user))
+        if (!_containers.TryGetContainer(pipe, PipeContainer, out var pipeContainer))
             return;
 
-        pipeComp.ContainedEntities.Remove(user);
+        if (!_containers.ContainsEntity(user, pipe))
+            return;
+
+        _containers.Remove(user, pipeContainer);
         RemComp<PipeCrawlingComponent>(user);
     }
 }
