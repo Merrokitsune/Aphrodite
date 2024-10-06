@@ -62,7 +62,7 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
 
         var verb = new ActivationVerb();
 
-        switch (pipeComp.ContainedEntities.Contains(args.User))
+        switch (_containers.ContainsEntity(args.User, uid))
         {
             case true:
             {
