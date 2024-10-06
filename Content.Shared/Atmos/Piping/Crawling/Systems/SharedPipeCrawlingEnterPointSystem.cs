@@ -60,7 +60,9 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
 
         var inPipe = HasComp<PipeCrawlingComponent>(args.User);
 
-        switch (_containers.ContainsEntity(args.User, uid))
+        var verb = new ActivationVerb();
+
+        switch (pipeComp.ContainedEntities.Contains(args.User))
         {
             case true:
             {
@@ -70,14 +72,11 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
                 if (!inPipe)
                     return;
 
-                args.Verbs.Add(new ActivationVerb()
+                verb.Text = Loc.GetString("connecting-exit");
+                verb.Act = () =>
                 {
-                    Text = Loc.GetString("connecting-exit"),
-                    Act = () =>
-                    {
-                        PipeExit(args.User, uid);
-                    }
-                });
+                    PipeExit(args.User, uid);
+                };
 
                 break;
             }
@@ -90,20 +89,18 @@ public sealed class SharedPipeCrawlingEnterPointSystem : EntitySystem
                 if (inPipe)
                     return;
 
-                args.Verbs.Add(new ActivationVerb()
+                verb.Text = Loc.GetString("mech-verb-enter");
+                verb.Act = () =>
                 {
-                    Text = Loc.GetString("mech-verb-enter"),
-                    Act = () =>
-                    {
-                        PipeEnter(args.User, uid);
-                    }
-                });
+                    PipeEnter(args.User, uid);
+                };
 
                 break;
             }
         }
-    }
 
+        args.Verbs.Add(verb);
+    }
     private void OnInteract(EntityUid uid, PipeCrawlingEnterPointComponent component, ActivateInWorldEvent args)
     {
         if (args.Handled)
