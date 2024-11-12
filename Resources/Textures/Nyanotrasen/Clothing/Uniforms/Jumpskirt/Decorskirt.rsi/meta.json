@@ -13,4 +13,13 @@
       {
         "name": "equipped-INNERCLOTHING",
         "directions": 4
-      }]}
+      },
+      {
+        "name": "flipped-equipped-INNERCLOTHING",
+        "directions": 4
+      },
+      {
+        "name": "icon_flipped"
+      }
+    ]
+}
