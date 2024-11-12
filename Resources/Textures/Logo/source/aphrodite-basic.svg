@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Aphrodite.svg"
+   inkscape:export-filename="..\..\..\..\Documents\GitHub\Aphrodite\Resources\Textures\Logo\icon\icon-256x256.png"
+   inkscape:export-xdpi="65.024002"
+   inkscape:export-ydpi="65.024002"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.8847266"
+     inkscape:cx="98.157473"
+     inkscape:cy="125.2171"
+     inkscape:window-width="1920"
+     inkscape:window-height="1046"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid132"
+       units="mm"
+       spacingx="1"
+       spacingy="1"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1675">
+      <rect
+         style="fill:#000000;fill-opacity:0.99000001;stroke:#ffffff;stroke-width:0;stroke-linecap:square"
+         id="rect1179"
+         width="50"
+         height="50"
+         x="0"
+         y="0" />
+      <path
+         style="fill:#ffffff;fill-opacity:0.99;stroke:#ffffff;stroke-width:0;stroke-linecap:square"
+         d="M 5,45 H 15 V 20.000001 l 15,15 L 20,35 V 45 H 44.999999 V 34.999999 L 15,5.000001 H 5 Z"
+         id="path511"
+         sodipodi:nodetypes="ccccccccccc" />
+      <path
+         style="fill:#ffffff;fill-opacity:0.99;stroke:#ffffff;stroke-width:0;stroke-linecap:square"
+         d="M 34.999998,5 V 15 H 44.999999 V 5 Z"
+         id="path1655" />
+    </g>
+  </g>
+</svg>
