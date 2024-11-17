@@ -143,6 +143,6 @@ public sealed class SharedPipeCrawlingSystem : EntitySystem
 
     private void OnMove(EntityUid uid, PipeCrawlingComponent component, ref MoveInputEvent args)
     {
-        component.IsMoving = (args.Entity.Comp.HeldMoveButtons & (MoveButtons.Down | MoveButtons.Left | MoveButtons.Up | MoveButtons.Right)) != 0x0;
+        component.IsMoving = (args.Entity.Component.HeldMoveButtons & (MoveButtons.Down | MoveButtons.Left | MoveButtons.Up | MoveButtons.Right)) != 0x0;
     }
 }
